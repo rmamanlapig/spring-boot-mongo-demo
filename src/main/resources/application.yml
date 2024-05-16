@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: spring-boot-mongo-demo
+  data:
+    mongodb:
+      uri: mongodb+srv://root:root@mongodemo.cofulvq.mongodb.net/?retryWrites=true&w=majority&appName=mongoDemo
+      database: sample-db
+
+#spring:application.name=spring-boot-mongo-demo
+#
+#spring.data.mongodb.uri=mongodb+srv://root:root@mongodemo.cofulvq.mongodb.net/?retryWrites=true&w=majority&appName=mongoDemo
+#spring.data.mongodb.database=sample-db
