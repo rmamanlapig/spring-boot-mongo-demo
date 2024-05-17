@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: spring-boot-mongo-demo
+  data:
+    mongodb:
+      uri: mongodb+srv://root:root@mongodemo.cofulvq.mongodb.net/?retryWrites=true&w=majority&appName=mongoDemo
+      database: sample-db
+      host: localhost
+      port: 27017
+
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          mongodb:
+            core:
+              MongoTemplate: DEBUG
