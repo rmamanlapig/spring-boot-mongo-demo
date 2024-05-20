@@ -5,19 +5,19 @@ import java.util.List;
 
 public interface PersonService {
 
-    // Add Person
+    // Create Person for DB
     Person addPerson(Person person);
 
-    // Get all Person
+    // Return all Person
     List<Person> getAllPerson();
-
-    // Get Person by ID
-    Person getPerson(String id);
-
-    // Update Person Info
-    Person updatePersonInfo(String id, Person person);
-
-    // Delete Person Info
-    Person deletePersonInfo(String id);
+//
+//    // Get Person by ID
+//    Person getPerson(String id);
+//
+//    // Update Person Info
+//    Person updatePersonInfo(String id, Person person);
+//
+//    // Delete Person Info
+//    Person deletePersonInfo(String id);
 
 }

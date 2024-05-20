@@ -20,23 +20,22 @@ public class PersonServiceImpl implements PersonService {
         return this.personRepository.save(person);
     }
 
-    @Override
     public List<Person> getAllPerson() {
         return this.personRepository.findAll();
     }
-
-    @Override
-    public Person getPerson(String id) {
-        return null;
-    }
-
-    @Override
-    public Person updatePersonInfo(String id, Person person) {
-        return null;
-    }
-
-    @Override
-    public Person deletePersonInfo(String id) {
-        return null;
-    }
+//
+//    @Override
+//    public Person getPerson(String id) {
+//        return null;
+//    }
+//
+//    @Override
+//    public Person updatePersonInfo(String id, Person person) {
+//        return null;
+//    }
+//
+//    @Override
+//    public Person deletePersonInfo(String id) {
+//        return null;
+//    }
 }
