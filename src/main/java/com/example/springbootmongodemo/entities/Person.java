@@ -16,6 +16,6 @@ public class Person
     private String id;
     private String firstName;
     private String lastName;
-    private Integer age;
+    private int age;
     boolean isStudying;
 }
