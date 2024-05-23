@@ -1,6 +1,7 @@
 # CHANGELOG
 
-## Current Version: v2024-05-15.1.0
+## Current Version: 1.2.0
 
 ### Development Versions:
-- **[v2024-05-15.1.0]** MongoDb and OpenAPI Integration, Basic APIs
+- **[1.2.0]** Removed OpenAPI and Docker, Improved Basic APIs (added GET, PUT and DELETE)
+- **[2024-05-15.1.0]** MongoDb and OpenAPI Integration, Basic APIs

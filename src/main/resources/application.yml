@@ -4,9 +4,7 @@ spring:
   data:
     mongodb:
       uri: mongodb+srv://root:root@mongodemo.cofulvq.mongodb.net/?retryWrites=true&w=majority&appName=mongoDemo
-      database: sample-db
-      host: localhost
-      port: 27017
+      database: person-demo-db
 
 logging:
   level:
@@ -15,4 +13,4 @@ logging:
         data:
           mongodb:
             core:
-              MongoTemplate: DEBUG
+              MongoTemplate: INFO

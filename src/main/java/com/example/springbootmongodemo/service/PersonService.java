@@ -2,22 +2,26 @@ package com.example.springbootmongodemo.service;
 
 import com.example.springbootmongodemo.entities.Person;
 import java.util.List;
+import org.springframework.http.ResponseEntity;
 
 public interface PersonService {
 
-    // Add Person
-    Person addPerson(Person person);
+    // Create Person for DB
+    ResponseEntity<Person> addPerson(Person person);
 
-    // Get all Person
-    List<Person> getAllPerson();
+    // Return all Person Data in DB
+    ResponseEntity<List<Person>> getAllPerson();
 
     // Get Person by ID
-    Person getPerson(String id);
+    ResponseEntity<Person> getPersonById(String id);
 
-    // Update Person Info
-    Person updatePersonInfo(String id, Person person);
+    // Get Person by Full Name
+    ResponseEntity<List<Person>> getPersonByName(String firstName, String lastName);
+
+    // Update Person
+    ResponseEntity<Person> updatePerson(String id, Person person);
 
     // Delete Person Info
-    Person deletePersonInfo(String id);
+    ResponseEntity<String> deletePerson(String id);
 
 }
