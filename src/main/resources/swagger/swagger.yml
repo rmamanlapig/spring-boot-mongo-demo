@@ -1,0 +1,141 @@
+openapi: 3.0.1
+info:
+  title: OpenAPI definition
+  version: v0
+servers:
+  - url: http://localhost:8080
+    description: Generated server url
+paths:
+  /person/updatePerson/{id}:
+    put:
+      tags:
+        - person-controller
+      operationId: updatePerson
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Person'
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Person'
+  /person/addPerson:
+    post:
+      tags:
+        - person-controller
+      operationId: addPerson
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Person'
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Person'
+  /person/getPersonByName/{firstName}/{lastName}:
+    get:
+      tags:
+        - person-controller
+      operationId: getPersonByName
+      parameters:
+        - name: firstName
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: lastName
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Person'
+  /person/getById/{id}:
+    get:
+      tags:
+        - person-controller
+      operationId: getPersonById
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Person'
+  /person/getAllPerson:
+    get:
+      tags:
+        - person-controller
+      operationId: getAllPerson
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Person'
+  /person/deletePerson/{id}:
+    delete:
+      tags:
+        - person-controller
+      operationId: deletePerson
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: string
+components:
+  schemas:
+    Person:
+      type: object
+      properties:
+        id:
+          type: string
+        firstName:
+          type: string
+        lastName:
+          type: string
+        age:
+          type: integer
+          format: int32
+        studying:
+          type: boolean

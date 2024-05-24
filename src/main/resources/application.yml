@@ -14,3 +14,6 @@ logging:
           mongodb:
             core:
               MongoTemplate: INFO
+springdoc:
+  api-docs:
+    path: /api-docs
